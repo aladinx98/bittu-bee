@@ -1,0 +1,87 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --primary-gradient: linear-gradient(90deg, #f4cd2a 0%, #f4cd2a 96.4%);
+  --primary-color: #f4cd2a;
+  --secondry1-color: #f4cc2aef;
+  --secondry01-color:rgba(77, 255, 0, 0.937);
+  --secondry-color: #f4cd2a;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: outfit;
+}
+body {
+  background-color: black;
+  color: white;
+  overflow-x: hidden;
+}
+
+@font-face {
+  font-family: outfit;
+  src: url("../src/assets/Outfit-VariableFont_wght.ttf");
+}
+
+
+
+
+.font-outfit {
+  font-family: outfit;
+}
+
+.text-primary-gradient {
+  background: var(--primary-gradient);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+.border-gradient {
+  border-image: linear-gradient(90deg, #eda323 0%, #f4cd2a 96.4%);
+  border-image-slice: 1;
+}
+.border-toko {
+  border-top: 1.5px solid #f0f0f0;
+  border-left: 1.5px solid #969696;
+  border-right: 1.5px solid #8f8e8e;
+}
+
+.navcar {
+  position: relative;
+}
+
+.btn2 {
+  display: flex;
+  font-weight: bold;
+  min-width: 120px;
+  height: fit-content;
+  font-size: 16px;
+  padding: 10px 25px;
+  justify-content: center;
+  align-items: center;
+  border-radius: 9px;
+  background: linear-gradient(90deg, #eda323 0%, #f4cd2a 100%);
+}
+.btn2:hover {
+  scale: 1.08;
+  transition: all 0.3s ease-in-out;
+}
+
+@media (max-width: 767px) {
+  .navcar::before {
+    content: ""; /* Ensures the pseudo-element is generated */
+    position: absolute;
+    top: -15px;
+    left: 94%;
+    border-bottom: 15px solid #1f2937;
+    border-left: 15px solid transparent;
+
+    /* Add your styles for the ::before element here */
+    width: 10px;
+    height: 10px;
+    /* background-color: red; */
+  }
+}
